@@ -84,11 +84,10 @@ img{
 	text-align: center;
 }
 
-.header-porky-text a{
-	
-}
+
 
 .ribbon{
+	position:relative;
 	display:block;
 	text-decoration: none;
 	color:black;
@@ -110,6 +109,10 @@ img{
 .button1{
 	height:50px;
 	width:405px;
+}
+
+.button1.back{
+	border-left: 25px solid #f3614c;
 }
 	/*End Header*/
 
@@ -164,6 +167,17 @@ img{
 } 
 .navigation img{
 	width:63%;
+}
+
+.navigation.fixed {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left:0;
+	padding: 5px 0;
+	overflow:hidden;
+	background-color: black;
+	z-index: 1;
 }
 
  /*End Navigation*/
@@ -252,8 +266,17 @@ img{
 
 .arrow.back{
 	left:0;
-	border-left: 25px solid #9dccab;
+	border-left: 25px solid #f3614c;
 
+}
+.arrow.back2{
+	left:0;
+	border-left: 25px solid #9ecdac;
+}
+
+.arrow.back3{
+	left:0;
+	border-left: 25px solid #ffffff;
 }
 
 .arrow{
@@ -450,8 +473,11 @@ a.button4{
 .porky-blog p span{
 	font-weight: bold;
 }
-a.button4{
-	color:black;
+.button4{
+	position: relative;
+	cursor: pointer;
+	height: 50px;
+	width: 191px;
 }
 
 /*End Blog Examples*/
