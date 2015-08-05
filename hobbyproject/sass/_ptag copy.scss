@@ -1,0 +1,11 @@
+
+@mixin h_tag($width: 50%, $color:#000000) {
+	h3{
+		width:$width;
+		font-size:30px;
+		color: $color;
+		text-align: center;
+		margin:0 auto;
+		line-height: 2;
+	}
+}	

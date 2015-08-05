@@ -1,0 +1,152 @@
+@import "_variables";
+@import "_utils";
+@import "_container";
+@import "_button";
+@import "_ptag";
+@import "_htag";
+
+
+
+body,html {
+	margin:0;
+	padding:0;
+	width:100%;
+	background:url(../assets/img/background-img.jpg);
+
+	
+	.cta-button{
+		@include cta();
+		@media screen and (max-width: $break-small){
+			@include cta(#FFF, #05B8CC, #037581, 10px, 15px)
+		}
+	}
+
+	.container{
+		@include container();
+	}
+	
+	iframe{
+		max-width: 100%;
+	}
+
+	.intro-layer{
+		position:fixed;
+		width:100%;
+		z-index: 10000;
+		background-color: transparent;
+		height:100%;
+		@media screen and (max-width: $break-small){
+			display:none;
+		}
+
+		.cta-container{
+			width:100%;
+			text-align: center;
+			h1{
+				color:$txt-color0;
+				font-size: $font-size-lg;
+				margin-bottom: 20px;
+			}
+		}
+
+		&:before{
+			content:'';
+			position:fixed;
+			width:100%;
+			height:100%;
+			top:0;
+			right:0;
+			bottom:0;
+			left:0;
+			background: linear-gradient(135deg, #0e0e0e 0%,#7d7e7d 100%); /* W3C */
+			opacity:.8;
+		}
+
+		.background-video{
+			position: absolute;
+			min-width: 100%;
+			min-height: 120%;
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);
+			z-index: -1;
+		}
+	}
+
+	.header-title{
+		height:25%;
+		width:100%;
+		h2{
+			margin-top: 100px;
+		}
+		@media screen and (max-width: $break-small){
+			display:none;
+		}
+	}
+
+	.video-preview{
+		position:absolute;
+		top:0;
+		transition:1s;
+	}
+
+	#map{
+		position:absolute;
+		top:0;
+		bottom:0;
+		height:50%;
+		width:100%;
+		transform:translateY(50%);
+		z-index: 1;
+		@media screen and (max-width: $break-small){
+			display:none;
+		}
+	}
+	#images{
+		display:none;
+		@media screen and (max-width: $break-small){
+			@extend #map;
+			display:inline-block;
+			height:60%;
+			transform:translateY(25%)
+		}
+	}
+	
+	.hike-details{
+		@include container(30%, $blue-bg, 25%, #000000, 75%, 0%);
+		@include h_tag(50%, #492817, 24px );
+		h3{
+			margin:100px auto;
+		}
+		@media screen and (max-width: $break-small){
+			@include container(100%, $blue-bg, 15%, #000000, 0%, 0%);
+			@include h_tag(100%, #492817, 30px );
+			h3{
+				margin:80px auto;
+			}
+		}
+		
+
+	}
+
+	.hike-description{
+		@include container(70%, $org-bg, 25%, #000000, 75%, 30%);
+		@include p_tag(80%,  $txt-color2, 15px );
+		@include h_tag(100%,  $txt-color2, 28px );
+		
+		@media screen and (max-width: $break-small) {
+			@include container(100%, $org-bg, #000000, 0, 75%);
+			@include p_tag(90%,  $txt-color2, 15px );
+			@include h_tag(80%,  $txt-color2, 24px );
+
+			// @include cta(#FFF, #05B8CC, #037581, 10px, 15px);
+		}
+	
+	}
+	
+}
+
+
+
+	
+

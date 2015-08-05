@@ -1,0 +1,20 @@
+
+/* primary CTA button */
+@mixin cta($color: #FFF, $bgColor: #05B8CC, $borderColor:#037581, $padding:15px, $fontsize:24px) {
+	// display: block;
+	// position: relative;
+	z-index: 0;
+	
+	display: inline-block;
+	color: $color;
+	background-color: $bgColor;
+	// position: relative;
+	text-align: center;
+	padding: $padding;
+	font-size: $fontsize;
+	line-height: 18px;
+	cursor:pointer;
+	border:solid $borderColor;
+
+	border-radius:1px;
+}

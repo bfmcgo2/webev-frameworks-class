@@ -1,0 +1,11 @@
+
+@mixin container($width: 50%, $bgColor: #ffce10, $height: 25%, $color:#000000, $top:0, $left:0) {
+	position: absolute;
+	width:$width;
+	height:$height;
+	color: $color;
+	background: $bgColor;
+	text-align: center;
+	top:$top;
+	left:$left;
+}

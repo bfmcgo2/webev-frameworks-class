@@ -1,0 +1,11 @@
+
+@mixin p_tag($width: 50%, $color:#000000, $font:20px) {
+	p{
+		width:$width;
+		font-size:$font;
+		color: $color;
+		text-align: left;
+		margin:25px auto;
+		line-height: 1.3;
+	}
+}	
